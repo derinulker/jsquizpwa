@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Geography Quiz</title>
+	<script src="quizproject.js"></script>
+	<link rel="stylesheet" type="text/css" href="quizproject.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- <link rel="manifest" href="manifest.json"> -->
+	<link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+	<meta name="theme-color" content="#4a90e2">
+	
+
+</head>
+<body> 
+
+
+
+<div class="grid-container">
+
+  <div class="header">
+    <div id="quizheader">
+	<h2>Test Your Canada Geography Knowledge</h2>
+	<p>Click on the best answer to each question. You will have 5 minutes to finish the quiz.<p>
+	<p id="countdown" style ="color:black; background-color:white; font-weight:bold;"></p>
+	</div>
+  </div>
+  
+  <div class="left">
+      <div id="quizz_slide" >
+          <div class="options" id="question"></div>
+          <div class="options" id="a" onclick="markIt('a')"></div>
+          <div class="options" id="b" onclick="markIt('b')"></div>
+          <div class="options" id="c" onclick="markIt('c')"></div>
+          <div class="options" id="d" onclick="markIt('d')"></div>
+        
+      </div>
+      <div id="welcome_slide" class="options" >
+        <p>Welcome, explorer! What's your first name?</p>
+        <p><input id="quizztaker_input" type="text" placeholder="Type your first name here..." class = "quizz_input"> <label></label></p>
+        <button id="start" onclick = "initialLoad()">START</button>
+      </div>
+
+      <div id="submit_slide" class="options">
+        <p>Please submit , to see your results</p>
+        <button id="submit" onclick = "Summary()">Submit</button>	
+      </div>
+      
+
+      <div id="result_slide" class="options">
+       <p id = "quizz_result">
+         Your results :
+       </p>
+       <div class="result-grid-container"> 
+        <button id="Question1">Q1</button>
+        <button id="Question2">Q2</button>
+        <button id="Question3">Q3</button>
+        <button id="Question4">Q4</button>
+        <button id="Question5">Q5</button>
+        <button id="Question6">Q6</button>
+        <button id="Question7">Q7</button>
+        <button id="Question8">Q8</button>
+        <button id="Question9">Q9</button>
+        <button id="Question10">Q10</button>
+
+       </div>
+	   <hr>
+       <p>Do you want to try again?</p>
+       <button id="Again" onclick = "initialLoad()" >Again</button>
+      </div>
+
+  </div> 
+
+ 
+  <div class="right"> <img id="image" src="quizimages/quizz.jpg" alt="XYZ"></div>
+  
+  <div class="footer1">
+<!--
+
+    <button id="next" onclick = "loadQuestion()">Next</button>
+		<button id="prev" onclick = "loadprevQuestion()">Prev</button>
+		<button id="Again" onclick = "initialLoad()" >Again</button>
+
+
+-->	
+
+  </div>
+  
+  <div class="footer2">
+		<div>
+			<label id="progress-percentage" > You have 0% completed. </label><br>
+			<progress id="progress" value="0" max="100" >  </progress>
+		</div>
+   
+  </div>
+</div>
+   
+<div id="results"> 
+
+
+</div>
+	
+</body>
+</html>
